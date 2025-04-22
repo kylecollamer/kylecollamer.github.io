@@ -21,7 +21,7 @@ h1, h2, h3 {
 
 /* A smooth, modern-looking header */
 header {
-  background-color: ##6b0505; /* Dark background for header */
+  background-color: #6b0505; /* Dark background for header */
   color: #fff;
   padding: 20px 40px;
   text-align: center;
