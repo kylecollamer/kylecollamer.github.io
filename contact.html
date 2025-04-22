@@ -14,36 +14,20 @@
         <h1>Contact Me</h1>
         <p>I am always happy to connect with new people. Feel free to use one of the options below.</p>
     </header>
-    <nav>
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href='#'>Projects</a></li>
-        <li class="dropdown">
-            <a href="#">Scouting</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Troop 205</a></li>
-                <li><a href="#">Wagion Lodge #6</a></li>
-                <li><a href="#">National Youth Leadership Training</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#">Services</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">App Development</a></li>
-                <li><a href="#">Consulting</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-    </nav>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
     <div class="contact-container">
         <section id="email">
             <h2>Email</h2>
             <p>Feel free to reach out via email.</p>
             <a href="mailto:kylecollamer@gmail.com">kylecollamer@gmail.com</a>
         </section>
-    
         <section id="linkedin">
             <h2>LinkedIn</h2>
             <p>Feel free to connect on LinkedIn. I also created a newsletter titled "Code & Compass" in which I write about leadership drawing from scouting and software engineering.</p>
