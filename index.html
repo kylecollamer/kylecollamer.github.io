@@ -14,29 +14,14 @@
         <h1>Kyle Collamer</h1>
         <p>Hello, welcome to my website. I am a future software developer, and this is my personal website.</p>
     </header>
-    <nav>
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href='#'>Projects</a></li>
-        <li class="dropdown">
-            <a href="#">Scouting</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Troop 205</a></li>
-                <li><a href="#">Wagion Lodge #6</a></li>
-                <li><a href="#">National Youth Leadership Training</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#">Services</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">App Development</a></li>
-                <li><a href="#">Consulting</a></li>
-            </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    </nav>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
     <footer>
         <p>&copy; 2025 Kyle Collamer</p>
     </footer>
