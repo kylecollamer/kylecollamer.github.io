@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure full height */
-  background-color: #708090;
+  background-color: #2F353B;
   color: #333;
 }
 
@@ -210,13 +210,17 @@ button:hover {
 
 .contact-container section {
     flex: 1;
-    background-color: #708090;
+    background-color: #9E1B32;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .contact-container h2 {
+    text-align: center;
+}
+
+.contact-container section {
     text-align: center;
 }
 
