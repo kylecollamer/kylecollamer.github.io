@@ -12,7 +12,6 @@ body {
   min-height: 100vh; /* Ensure full height */
   background-color: #2F353B;
   color: #FFFFFF;
-  padding: 20px;
 }
 
 h1, h2, h3 {
@@ -237,9 +236,5 @@ a {
     font-weight: bold;
     color: white;
     text-decoration: underline;
-}
-
-#content {
-    padding: 20px; /* Adjust this value as needed */
 }
 
