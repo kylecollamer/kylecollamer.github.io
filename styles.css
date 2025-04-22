@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure full height */
-  background-color: #262626;
+  background-color: #708090;
   color: #333;
 }
 
@@ -21,7 +21,7 @@ h1, h2, h3 {
 
 /* A smooth, modern-looking header */
 header {
-  background-color: #6b0505; /* Dark background for header */
+  background-color: #9E1B32; /* Dark background for header */
   color: #fff;
   padding: 20px 40px;
   text-align: center;
@@ -103,7 +103,7 @@ article p {
 
 /* Footer with modern design */
 footer {
-  background-color: #1a202c;
+  background-color: #9E1B32;
   color: #fff;
   padding: 20px;
   text-align: center;
