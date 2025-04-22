@@ -39,24 +39,65 @@ header p {
 
 /* Clean, simple navigation menu */
 nav {
-  background-color: #2d3748;
-  display: flex;
-  justify-content: center;
+  background-color: #2A3D44; /* Gunmetal */
+  color: #ffffff;
   padding: 10px 0;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s;
+.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
-nav a:hover {
-  color: #f56565;
+.navbar > li {
+  position: relative;
+  margin: 0 20px;
 }
+
+.navbar a {
+  color: #B8B2A6; /* Dusty Taupe */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #556B2F; /* Muted Olive Green */
+  color: #ffffff;
+}
+
+/* Dropdown Menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Aligns below the parent item */
+  left: 0;
+  background-color: #2A3D44; /* Gunmetal */
+  min-width: 200px;
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.dropdown-menu li a {
+  color: #B8B2A6; /* Dusty Taupe */
+  padding: 10px;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #556B2F; /* Muted Olive Green */
+  color: #ffffff;
+}
+
 
 /* Main content section */
 main {
