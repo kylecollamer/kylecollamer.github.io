@@ -238,3 +238,7 @@ a {
     text-decoration: underline;
 }
 
+#content {
+    padding: 20px; /* Adjust this value as needed */
+}
+
