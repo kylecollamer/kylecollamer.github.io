@@ -71,12 +71,6 @@ nav {
   color: #ffffff;
 }
 
-.navbar > li.dropdown > a::after {
-  content: ' ▼';
-  font-size: 0.6em;
-  margin-left: 5px;
-}
-
 /* Dropdown Menu */
 .dropdown:hover .dropdown-menu {
   display: block;
