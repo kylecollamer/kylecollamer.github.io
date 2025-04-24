@@ -241,7 +241,7 @@ button:hover {
 
 .contact-container p,
 .contact-container ul {
-    text-align: center;
+    text-align: left;
 }
 
 @media (max-width: 768px) {
