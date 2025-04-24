@@ -22,11 +22,21 @@
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
         });
+
+        fetch('text-files/religious-emblem-description.txt')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('schedule-description').innerText = text;
+        })
+        .catch(error => {
+            console.error('Error loading schedule description:', error);
+            document.getElementById('schedule-description').innerText = 'Failed to load description.';
+        });
     </script>
     <div class="contact-container">
         <section style="text-align: center;">
             <h1>Ad Altare Dei and Pope Pius XII 2025-2026</h1>
-            <p>I am offering these emblems starting in August 2025 and ending in March 2026.</p>
+            <p id="schedule-description">Loading...</p>
         </section>
     </div>
     <div class="contact-container">
