@@ -213,42 +213,35 @@ button:hover {
 
 .contact-container {
     display: flex;
-    flex-direction: column; /* Stack sections vertically */
-    gap: 2rem; /* Proper spacing between sections */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
     padding: 2rem;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    max-width: 1200px; /* Avoid sections being too wide on big screens */
+    max-width: 1400px;
+    box-sizing: border-box;
 }
 
 .contact-container section {
-    flex: 1;
+    flex: 1 1 45%;
+    min-width: 300px;
     background-color: #444d5c;
-    padding: 2rem; /* Increased padding for better spacing inside sections */
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    text-align: left; /* Ensure text is left-aligned */
+    color: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .contact-container h2 {
     text-align: center;
-    margin-bottom: 1rem; /* Space below the heading */
+    margin-top: 0;
 }
 
-.contact-container h3 {
-    margin-top: 1.5rem; /* Space above subheadings */
-    margin-bottom: 0.5rem; /* Keep subheadings close to text */
-}
-
-.contact-container p {
-    text-align: left; /* Left-align paragraph text */
-    line-height: 1.6; /* Improve readability */
-    margin-bottom: 1rem; /* Space between paragraphs */
-}
-
-.contact-container a {
-    display: inline-block;
-    margin-top: 0.5rem; /* Space above links */
+.contact-container p,
+.contact-container ul {
+    text-align: center;
 }
 
 @media (max-width: 768px) {
