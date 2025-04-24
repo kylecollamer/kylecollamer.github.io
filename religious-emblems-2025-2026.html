@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Diocese of Greensburg Catholic Religious Emblems 2025-2026</title>
+</head>
+
+<body>
+    <header>
+        <h1>Catholic Religious Emblems</h1>
+        <p>I offer Catholic Religious Emblems within the Diocese of Greensburg Catholic Committee on Scouting.</p>
+    </header>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+    <footer>
+        <p>&copy; 2025 Kyle Collamer</p>
+    </footer>
+</body>
+</html>
