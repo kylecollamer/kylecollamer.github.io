@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure full height */
-  background-color: #2F353B;
+  background-color: #4a5463;
   color: #FFFFFF;
 }
 
@@ -21,7 +21,7 @@ h1, h2, h3 {
 
 /* A smooth, modern-looking header */
 header {
-  background-color: #9E1B32; /* Dark background for header */
+  background-color: #3a424f; /* Dark background for header */
   color: #fff;
   padding: 20px 40px;
   text-align: center;
@@ -154,7 +154,7 @@ footer {
 }
 
 footer a {
-  color: #f56565;
+  color: #3a424f;
   text-decoration: none;
 }
 
@@ -210,7 +210,7 @@ button:hover {
 
 .contact-container section {
     flex: 1;
-    background-color: #9E1B32;
+    background-color: #444d5c;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
