@@ -67,7 +67,7 @@ nav {
 }
 
 .navbar a:hover {
-  background-color: #731223; /* Muted Olive Green */
+  background-color: #3a424f;
   color: #ffffff;
 }
 
@@ -94,7 +94,7 @@ nav {
 }
 
 .dropdown-menu li a:hover {
-  background-color: #731223; /* Muted Olive Green */
+  background-color: #3a424f;
   color: #ffffff;
 }
 
