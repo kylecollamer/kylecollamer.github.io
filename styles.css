@@ -215,8 +215,9 @@ button:hover {
     display: flex;
     gap: 2rem;
     padding: 2rem;
-    max-width: 1000px;
+    width: 90%;
     margin: 0 auto;
+    max-width: 1400px;
 }
 
 .contact-container section {
