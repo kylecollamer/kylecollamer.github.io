@@ -59,7 +59,7 @@ nav {
 }
 
 .navbar a {
-  color: #B8B2A6; /* Dusty Taupe */
+  color: #B8B2A6;
   text-decoration: none;
   font-weight: bold;
   padding: 10px;
@@ -94,7 +94,7 @@ nav {
 }
 
 .dropdown-menu li a:hover {
-  background-color: #3a424f;
+  background-color: #373e4a;
   color: #ffffff;
 }
 
