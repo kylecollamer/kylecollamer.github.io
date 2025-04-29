@@ -263,3 +263,25 @@ a {
   padding: 0 20px;
 }
 
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.caption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #444;
+}

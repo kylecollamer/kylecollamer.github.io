@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="styles.css">
     <title>College for Kids</title>
 </head>
+<script>
+    let slideIndex = 0;
+    
+    function showSlides() {
+        const slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+    
+    showSlides();
+</script>    
 <body>
     <header>
         <h1>College for Kids</h1>
@@ -27,6 +45,16 @@
             <p>Below is a link to more information about College for Kids, Penn State Behrend's six-week summer enrichment program:</p>
             <p><a href="https://behrend.psu.edu/research-outreach/youth-education-outreach/college-for-kids" target="_blank" rel="noopener noreferrer">College for Kids at Penn State Behrend</a></p>
         </section>
+    </div>
+    <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="college-for-kids-images/dashboard.png" alt="Dashboard">
+          <p class="caption">This is the dashboard, which is the main landing page of the application.</p>
+        </div>
+        <div class="slide fade">
+          <img src="college-for-kids-images/manage-kits.png" alt="Manage Kits">
+          <p class="caption">This screen allows the user to create, update, and remove kits.</p>
+        </div>
     </div>
     <footer>
         <p>&copy; 2025 Kyle Collamer</p>
