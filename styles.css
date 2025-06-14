@@ -435,13 +435,17 @@ a:hover {
 
 .two-column-feature {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 40px;
-  align-items: stretch; /* Make children same height */
+  align-items: stretch;
   justify-content: space-between;
   margin: 3rem auto;
   max-width: 1200px;
   padding: 0 20px;
+  width: 100%;
 }
+
 
 /* Shared styling for both sides */
 .feature-text, .map-container, .feature-slideshow {
