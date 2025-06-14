@@ -1,4 +1,23 @@
-<main class="grid-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Religious Emblems | Diocese of Greensburg 2025–2026</title>
+</head>
+
+<body>
+  <header>
+    <h1>Catholic Religious Emblems</h1>
+    <p>I offer Catholic Religious Emblems within the Diocese of Greensburg Catholic Committee on Scouting.</p>
+  </header>
+
+  <nav id="navbar-container"></nav>
+
+  <main class="grid-container">
 
   <!-- Row 1 -->
   <section class="card">
@@ -63,3 +82,31 @@
   </section>
 
 </main>
+
+
+  <footer>
+    <p>&copy; 2025 Kyle Collamer</p>
+  </footer>
+
+  <script>
+    // Load navigation bar
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+      })
+      .catch(err => console.error('Navbar load error:', err));
+
+    // Load schedule description
+    fetch('text-files/religious-emblem-description.txt')
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('schedule-description').innerText = text;
+      })
+      .catch(err => {
+        console.error('Schedule description load error:', err);
+        document.getElementById('schedule-description').innerText = 'Failed to load description.';
+      });
+  </script>
+</body>
+</html>
