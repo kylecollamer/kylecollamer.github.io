@@ -46,6 +46,7 @@ nav {
   background-color: #373e4a;
   color: #ffffff;
   padding: 10px 0;
+  position: sticky
 }
 
 .navbar {
