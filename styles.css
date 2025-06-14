@@ -1,43 +1,47 @@
-/* Reset some default styling */
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Reset defaults and apply base styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure full height */
-  background-color: #4a5463;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #4a5463, #2f3744);
   color: #FFFFFF;
 }
 
+/* Headings */
 h1, h2, h3 {
   color: #FFFFFF;
   font-weight: 600;
 }
 
-/* A smooth, modern-looking header */
+/* Header styling */
 header {
-  background-color: #3a424f;
+  background: linear-gradient(to right, #2f3744, #3a424f);
   color: #fff;
-  padding: 20px 40px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1rem;
-  opacity: 0.7;
+  font-size: 1.1rem;
+  opacity: 0.8;
 }
 
-/* Clean, simple navigation menu */
+/* Navigation bar */
 nav {
   background-color: #373e4a;
   color: #ffffff;
@@ -49,8 +53,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
 }
 
 .navbar > li {
@@ -64,6 +66,7 @@ nav {
   font-weight: bold;
   padding: 10px;
   display: block;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
@@ -71,7 +74,7 @@ nav {
   color: #ffffff;
 }
 
-/* Dropdown Menu */
+/* Dropdown */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -93,9 +96,10 @@ nav {
 }
 
 .dropdown-menu li a {
-  color: #B8B2A6; /* Dusty Taupe */
+  color: #B8B2A6;
   padding: 10px;
   display: block;
+  transition: background-color 0.3s ease;
 }
 
 .dropdown-menu li a:hover {
@@ -103,16 +107,15 @@ nav {
   color: #ffffff;
 }
 
-
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* Main content section */
+/* Main content grid */
 main {
-  flex: 1; /* Takes up available space */
+  flex: 1;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -123,14 +126,14 @@ main {
 
 article {
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s;
 }
 
 article:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 article img {
@@ -153,19 +156,19 @@ article p {
   color: #555;
 }
 
-/* Footer with modern design */
+/* Footer */
 footer {
   background-color: #3a424f;
   color: #fff;
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
-  opacity: 0.7;
-  margin-top: auto; /* Pushes the footer to the bottom */
+  opacity: 0.75;
+  margin-top: auto;
 }
 
 footer a {
-  color: #3a424f;
+  color: #B8B2A6;
   text-decoration: none;
 }
 
@@ -173,7 +176,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Button with modern design */
+/* Buttons */
 button {
   background-color: #f56565;
   color: white;
@@ -182,7 +185,7 @@ button {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: background-color 0.3s ease;
 }
 
@@ -190,72 +193,78 @@ button:hover {
   background-color: #e53e3e;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  nav {
-    flex-direction: column;
-  }
-
-  main {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* Responsive contact sections in columns */
 .contact-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1400px;
-    box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .contact-container section {
-    flex: 1 1 45%;
-    min-width: 300px;
-    background-color: #444d5c;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    color: #FFFFFF;
-    box-sizing: border-box;
+  flex: 1 1 45%;
+  min-width: 300px;
+  background-color: #2f3744;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #FFFFFF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .contact-container h2 {
-    text-align: center;
-    margin-top: 0;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .contact-container p,
 .contact-container ul {
-    text-align: left;
+  text-align: left;
+  line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
+.contact-container ul {
+  list-style: none;
+  padding: 0;
 }
 
+.contact-container ul li a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #3a424f;
+  border-radius: 999px;
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.contact-container ul li a:hover {
+  background: #4a5568;
+}
+
+/* Links */
 a {
-    font-weight: bold;
-    color: white;
-    text-decoration: underline;
+  font-weight: 500;
+  color: #63b3ed;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
+a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #63b3ed;
+}
+
+/* Page wrapper */
 .page-container {
   width: 100%;
   max-width: 1200px;
@@ -263,6 +272,7 @@ a {
   padding: 0 20px;
 }
 
+/* Slideshow */
 .slideshow-container {
   max-width: 800px;
   position: relative;
@@ -284,4 +294,33 @@ a {
   margin-top: 8px;
   font-size: 1rem;
   color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-container section {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
 }
