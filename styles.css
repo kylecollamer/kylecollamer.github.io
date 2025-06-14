@@ -447,6 +447,7 @@ a:hover {
   flex: 1;
   min-width: 600px;
   max-width: 600px;
+  height: 1000px;
   color: #EAEAEA;
 }
 
@@ -468,6 +469,7 @@ a:hover {
   flex: 1;
   min-width: 600px;
   max-width: 600px;
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
