@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Troop 205</title>
+  </head>
+  <body>
+    <header>
+      <h1>Troop 205</h1>
+      <p>I am an assistant scoutmaster in Troop 205. Take a look at my previous partipation in troop events!</p>
+    </header>
+
+    <div id="navbar-container"></div>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <main>
+        <div class="two-column-feature">
+            <div class="feature-text">
+                <h2>Gearhard Farms Weekend</h2>
+                <p>
+                    Troop 205 had our annual Webelos weekend at Gearhard farms.
+                    The facility offers a great space which includes a large activity field and lighted pavilion.
+                    This is a great area for groups and events.
+                </p>
+            </div>
+            <div class="feature-slideshow">
+                <img id="troop-205-images/slideshow-image-gearhard-farms-2024" src="" alt="Gearhard Farms 2024 Photo">
+            </div>
+        </div>
+
+        <div class="two-column-feature">
+            <div class="feature-text">
+                <h2>Camp Conestoga 2024</h2>
+                <p>
+                    Troop 205 went to Camp Conestoga from July 7th to July 13th.
+                    The scouts earned many merit badges. We even had Troop 205 scouts on camp staff!
+                </p>
+            </div>
+            <div class="feature-slideshow">
+                <img id="troop-205-images/slideshow-image-camp-conestoga-2024" src="" alt="Camp Conestoga 2024 Photo">
+            </div>
+        </div>
+
+      <!-- Slideshows -->
+      <script>
+        // Watkins Glen slideshow
+        let imagesWatkinsGlen = [];
+        let slideIndexWatkinsGlen = 0;
+        fetch('motorsport-images/watkins-glen-imsa-2024-images/images.json')
+          .then(response => response.json())
+          .then(data => {
+            imagesWatkinsGlen = data.map(filename => `motorsport-images/watkins-glen-imsa-2024-images/${filename}`);
+            showSlidesWatkinsGlen();
+          });
+        function showSlidesWatkinsGlen() {
+          if (imagesWatkinsGlen.length === 0) return;
+          const imgElement = document.getElementById('slideshow-image-watkinsglen');
+          imgElement.src = imagesWatkinsGlen[slideIndexWatkinsGlen];
+          slideIndexWatkinsGlen = (slideIndexWatkinsGlen + 1) % imagesWatkinsGlen.length;
+          setTimeout(showSlidesWatkinsGlen, 4000);
+        }
+
+        // Mid-Ohio slideshow
+        let imagesMidOhio = [];
+        let slideIndexMidOhio = 0;
+        fetch('motorsport-images/mid-ohio-indycar-2024-images/images.json')
+          .then(response => response.json())
+          .then(data => {
+            imagesMidOhio = data.map(filename => `motorsport-images/mid-ohio-indycar-2024-images/${filename}`);
+            showSlidesMidOhio();
+          });
+        function showSlidesMidOhio() {
+          if (imagesMidOhio.length === 0) return;
+          const imgElement = document.getElementById('slideshow-image-midohio');
+          imgElement.src = imagesMidOhio[slideIndexMidOhio];
+          slideIndexMidOhio = (slideIndexMidOhio + 1) % imagesMidOhio.length;
+          setTimeout(showSlidesMidOhio, 4000);
+        }
+      </script>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Kyle Collamer</p>
+    </footer>
+  </body>
+</html>
