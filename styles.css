@@ -470,7 +470,7 @@ a:hover {
   height: 600px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .feature-slideshow img {
