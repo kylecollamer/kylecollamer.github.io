@@ -347,6 +347,7 @@ a:hover {
   color: #ffffff;
   border-bottom: 1px solid #4a5568;
   padding-bottom: 0.5rem;
+  align-items: center;
 }
 
 .about-content p {
