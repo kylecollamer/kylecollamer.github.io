@@ -445,9 +445,8 @@ a:hover {
 
 .feature-text {
   flex: 1;
-  min-width: 600px;
-  max-width: 600px;
-  height: 1000px;
+  width: 600px;
+  height: 600px;
   color: #EAEAEA;
 }
 
@@ -467,9 +466,8 @@ a:hover {
 
 .feature-slideshow {
   flex: 1;
-  min-width: 600px;
-  max-width: 600px;
-  height: 1000px;
+  width: 600px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
