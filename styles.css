@@ -119,9 +119,10 @@ main {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  width: 100%;
 }
 
 article {
