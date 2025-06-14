@@ -438,7 +438,6 @@ a:hover {
   gap: 40px;
   align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap;
   margin: 3rem auto;
   max-width: 1200px;
   padding: 0 20px;
