@@ -59,10 +59,10 @@
         // Watkins Glen slideshow
         let imagesWatkinsGlen = [];
         let slideIndexWatkinsGlen = 0;
-        fetch('watkins-glen-imsa-2024-images/images.json')
+        fetch('motorsport-images/watkins-glen-imsa-2024-images/images.json')
           .then(response => response.json())
           .then(data => {
-            imagesWatkinsGlen = data.map(filename => `watkins-glen-imsa-2024-images/${filename}`);
+            imagesWatkinsGlen = data.map(filename => `motorsport-images/watkins-glen-imsa-2024-images/${filename}`);
             showSlidesWatkinsGlen();
           });
         function showSlidesWatkinsGlen() {
@@ -76,10 +76,10 @@
         // Mid-Ohio slideshow
         let imagesMidOhio = [];
         let slideIndexMidOhio = 0;
-        fetch('mid-ohio-indycar-2024-images/images.json')
+        fetch('motorsport-images/mid-ohio-indycar-2024-images/images.json')
           .then(response => response.json())
           .then(data => {
-            imagesMidOhio = data.map(filename => `mid-ohio-indycar-2024-images/${filename}`);
+            imagesMidOhio = data.map(filename => `motorsport-images/mid-ohio-indycar-2024-images/${filename}`);
             showSlidesMidOhio();
           });
         function showSlidesMidOhio() {
