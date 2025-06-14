@@ -332,6 +332,13 @@ a:hover {
   line-height: 1.8;
   font-size: 1.05rem;
   color: #EAEAEA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-content section {
+  width: 100%;
 }
 
 .about-content h2 {
