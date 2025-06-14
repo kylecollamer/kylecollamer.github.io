@@ -53,38 +53,37 @@
 
       <!-- Slideshows -->
       <script>
-        // Watkins Glen slideshow
-        let imagesWatkinsGlen = [];
-        let slideIndexWatkinsGlen = 0;
-        fetch('motorsport-images/watkins-glen-imsa-2024-images/images.json')
+        let imagesGearhardFarms2024 = [];
+        let slideIndexGearhardFarms2024 = 0;
+        fetch('troop-205-images/slideshow-image-gearhard-farms-2024/images.json')
           .then(response => response.json())
           .then(data => {
-            imagesWatkinsGlen = data.map(filename => `motorsport-images/watkins-glen-imsa-2024-images/${filename}`);
-            showSlidesWatkinsGlen();
+            imagesGearhardFarms2024 = data.map(filename => `troop-205-images/slideshow-image-gearhard-farms-2024/${filename}`);
+            showSlidesGearhardFarms2024();
           });
-        function showSlidesWatkinsGlen() {
-          if (imagesWatkinsGlen.length === 0) return;
-          const imgElement = document.getElementById('slideshow-image-watkinsglen');
-          imgElement.src = imagesWatkinsGlen[slideIndexWatkinsGlen];
-          slideIndexWatkinsGlen = (slideIndexWatkinsGlen + 1) % imagesWatkinsGlen.length;
-          setTimeout(showSlidesWatkinsGlen, 4000);
+        function showSlidesGearhardFarms2024() {
+          if (imagesGearhardFarms2024.length === 0) return;
+          const imgElement = document.getElementById('slideshow-image-gearhard-farms-2024');
+          imgElement.src = imagesGearhardFarms2024[slideIndexGearhardFarms2024];
+          slideIndexGearhardFarms2024 = (slideIndexGearhardFarms2024 + 1) % imagesGearhardFarms2024.length;
+          setTimeout(showSlidesGearhardFarms2024, 4000);
         }
 
         // Mid-Ohio slideshow
-        let imagesMidOhio = [];
-        let slideIndexMidOhio = 0;
-        fetch('motorsport-images/mid-ohio-indycar-2024-images/images.json')
+        let imagesCampConestoga2024 = [];
+        let slideIndexCampConestoga2024 = 0;
+        fetch('troop-205-images/slideshow-image-camp-conestoga-2024/images.json')
           .then(response => response.json())
           .then(data => {
-            imagesMidOhio = data.map(filename => `motorsport-images/mid-ohio-indycar-2024-images/${filename}`);
-            showSlidesMidOhio();
+            imagesCampConestoga2024 = data.map(filename => `troop-205-images/slideshow-image-camp-conestoga-2024/${filename}`);
+            showSlidesCampConestoga2024();
           });
-        function showSlidesMidOhio() {
-          if (imagesMidOhio.length === 0) return;
-          const imgElement = document.getElementById('slideshow-image-midohio');
-          imgElement.src = imagesMidOhio[slideIndexMidOhio];
-          slideIndexMidOhio = (slideIndexMidOhio + 1) % imagesMidOhio.length;
-          setTimeout(showSlidesMidOhio, 4000);
+        function showSlidesCampConestoga2024() {
+          if (imagesCampConestoga2024.length === 0) return;
+          const imgElement = document.getElementById('slideshow-image-camp-conestoga-2024');
+          imgElement.src = imagesCampConestoga2024[slideIndexCampConestoga2024];
+          slideIndexCampConestoga2024 = (slideIndexCampConestoga2024 + 1) % imagesCampConestoga2024.length;
+          setTimeout(showSlidesCampConestoga2024, 4000);
         }
       </script>
     </main>
