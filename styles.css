@@ -324,3 +324,25 @@ a:hover {
     flex-direction: column;
   }
 }
+
+.about-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #EAEAEA;
+}
+
+.about-content h2 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  border-bottom: 1px solid #4a5568;
+  padding-bottom: 0.5rem;
+}
+
+.about-content p {
+  margin-top: 1rem;
+  color: #cccccc;
+}
