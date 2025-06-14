@@ -437,24 +437,24 @@ a:hover {
 .two-column-feature {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   gap: 40px;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: space-between;
-  margin: 3rem auto;
-  max-width: 1200px;
-  padding: 0 20px;
   width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 
 /* Shared styling for both sides */
 .feature-text, .map-container, .feature-slideshow {
-  flex: 1;
-  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
 }
 
 /* Text-specific tweaks */
@@ -468,6 +468,9 @@ a:hover {
   border-bottom: 1px solid #4a5568;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  margin-top: 0;
+  line-height: 1.2;
+  min-height: 3.6rem;
 }
 
 .feature-text p {
