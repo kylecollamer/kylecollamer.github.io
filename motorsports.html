@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <header>
+      <h1>Motorsports</h1>
+      <p>Take a look at my previous travels at various motorsports events!</p>
+    </header>
+
+    <div id="navbar-container"></div>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <section class="card">
+        <h2>2024 Sahlen's Six Hours of The Glen</h2>
+        <p>
+            The 2024 Sahlen's Six Hours of The Glen took place on June 23, 2024,
+            at Watkins Glen International in Dix, New York. Serving as the sixth round of the 2024 IMSA SportsCar Championship
+            and the third round of the Michelin Endurance Cup,
+            the event featured top-tier sports car competition over a six-hour endurance format.
+        </p>
+    </section>
+    <section class="card">
+        <h2>Photo Slideshow</h2>
+        <div class="slideshow-container" style="text-align: center;">
+            <img id="slideshow-image" src="" alt="Motorsport Photo" style="max-width: 100%; height: auto; max-height: 600px;">
+        </div>
+        <script>
+            let images = [];
+            let slideIndex = 0;
+            fetch('watkins-glen-imsa-2024-images/images.json')
+            .then(response => response.json())
+            .then(data => {
+                images = data.map(filename => `watkins-glen-imsa-2024-images/${filename}`);
+                showSlides();
+            });
+            function showSlides() {
+                if (images.length === 0) return;
+                const imgElement = document.getElementById('slideshow-image');
+                imgElement.src = images[slideIndex];
+                slideIndex = (slideIndex + 1) % images.length;
+                setTimeout(showSlides, 4000);
+            }
+        </script>
+    </section>
+
+
+
+    <footer>
+      <p>&copy; 2025 Kyle Collamer</p>
+    </footer>
+  </body>
+</html>
