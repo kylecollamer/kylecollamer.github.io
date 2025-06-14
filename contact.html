@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
-    <link rel="stylesheet" href="styles.css">
-    <title>Contact</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+        <link rel="stylesheet" href="styles.css">
+        <title>Contact</title>
+    </head>
 
-<body>
-    <header>
-        <h1>Contact Me</h1>
-        <p>I am always happy to connect with new people. Feel free to use one of the options below.</p>
-    </header>
-    <div id="navbar-container"></div>
-    <script>
-        fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar-container').innerHTML = data;
-        });
-    </script>
-    <div class="contact-container">
-    <section id="email">
-        <h2 style="text-align: center;">Email</h2>
-        <p style="text-align: center;">Feel free to reach out via email for any inquiries.</p>
-        <div style="margin-top: 1rem;">
-            <h3 style="margin-bottom: 0.25rem;">Business and General Correspondence</h3>
-            <a href="mailto:kylecollamer@gmail.com">kylecollamer@gmail.com</a>
-        </div>
-        <div style="margin-top: 1rem;">
-            <h3 style="margin-bottom: 0.25rem;">Scouting Correspondence</h3>
-            <a href="mailto:t205kcollamer@gmail.com">t205kcollamer@gmail.com</a>
-        </div>
-    </section>
-    <section id="linkedin">
-        <h2 style="text-align: center;">LinkedIn</h2>
-        <p style="text-align: center;">
-        Feel free to connect on LinkedIn. I also created a newsletter titled <strong>"Code & Compass"</strong>,
-        where I write about leadership, drawing from my experiences in scouting and software engineering.
-        </p>
-        <div style="margin-top: 1rem;">
-            <h3 style="margin-bottom: 0.25rem;">LinkedIn Profile</h3>
-            <a href="https://www.linkedin.com/in/kyle-collamer-a36800232/" target="_blank" rel="noopener noreferrer">
-            View my profile
-            </a>
-        </div>
-        <div style="margin-top: 1rem;">
-            <h3 style="margin-bottom: 0.25rem;">Code & Compass Newsletter</h3>
-            <a href="https://www.linkedin.com/newsletters/code-compass-7311093232849874944/" target="_blank" rel="noopener noreferrer">
-            Subscribe to my newsletter
-            </a>
-        </div>
-    </section>
-    </div>
-    <footer>
-        <p>&copy; 2025 Kyle Collamer</p>
-    </footer>
-</body>
+    <body>
+        <header>
+            <h1>Contact Me</h1>
+            <p>I am always happy to connect with new people. Feel free to use one of the options below.</p>
+        </header>
+
+        <div id="navbar-container"></div>
+
+        <script>
+            fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+        </script>
+        
+        <main>
+            <div class="two-column-feature">
+                <div class="feature-text">
+                    <h2>Email</h2>
+                    <p>Feel free to reach out via email for any inquiries.</p>
+                    <div style="margin-top: 1rem;">
+                        <h3 style="margin-bottom: 0.25rem;">Business and General Correspondence</h3>
+                        <a href="mailto:kylecollamer@gmail.com">kylecollamer@gmail.com</a>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <h3 style="margin-bottom: 0.25rem;">Scouting Correspondence</h3>
+                        <a href="mailto:t205kcollamer@gmail.com">t205kcollamer@gmail.com</a>
+                    </div>
+                </div>
+                <div class="feature-text">
+                    <h2 style="text-align: center;">LinkedIn</h2>
+            <p style="text-align: center;">
+            Feel free to connect on LinkedIn. I also created a newsletter titled <strong>"Code & Compass"</strong>,
+            where I write about leadership, drawing from my experiences in scouting and software engineering.
+            </p>
+            <div style="margin-top: 1rem;">
+                <h3 style="margin-bottom: 0.25rem;">LinkedIn Profile</h3>
+                <a href="https://www.linkedin.com/in/kyle-collamer-a36800232/" target="_blank" rel="noopener noreferrer">
+                View my profile
+                </a>
+            </div>
+            <div style="margin-top: 1rem;">
+                <h3 style="margin-bottom: 0.25rem;">Code & Compass Newsletter</h3>
+                <a href="https://www.linkedin.com/newsletters/code-compass-7311093232849874944/" target="_blank" rel="noopener noreferrer">
+                Subscribe to my newsletter
+                </a>
+            </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Kyle Collamer</p>
+        </footer>
+    </body>
 </html>
