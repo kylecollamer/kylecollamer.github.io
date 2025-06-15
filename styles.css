@@ -541,11 +541,3 @@ a:hover {
   border-color: #cbd5e0; /* soft border on focus */
   box-shadow: 0 0 0 2px #cbd5e0;
 }
-
-/* Layout for the main content */
-main {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
