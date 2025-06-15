@@ -541,3 +541,46 @@ a:hover {
   border-color: #cbd5e0; /* soft border on focus */
   box-shadow: 0 0 0 2px #cbd5e0;
 }
+
+/* Layout for the main content */
+main {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+/* Sidebar Table of Contents (TOC) */
+#toc {
+  width: 200px;
+  padding-right: 20px;
+  position: sticky;
+  top: 1rem;
+  align-self: flex-start;
+}
+
+#toc h3 {
+  margin-top: 0;
+}
+
+#toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#toc li {
+  margin-bottom: 0.5rem;
+}
+
+#toc a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+#toc a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure main content flexes beside the TOC */
+.content {
+  flex: 1;
+}
