@@ -9,10 +9,6 @@
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -553,38 +549,3 @@ main {
   padding: 20px;
 }
 
-/* Sidebar Table of Contents (TOC) */
-#toc {
-  width: 200px;
-  padding-right: 20px;
-  position: sticky;
-  top: 1rem;
-  align-self: flex-start;
-}
-
-#toc h3 {
-  margin-top: 0;
-}
-
-#toc ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-#toc li {
-  margin-bottom: 0.5rem;
-}
-
-#toc a {
-  text-decoration: none;
-  color: #0077cc;
-}
-
-#toc a:hover {
-  text-decoration: underline;
-}
-
-/* Ensure main content flexes beside the TOC */
-.content {
-  flex: 1;
-}
