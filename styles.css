@@ -600,3 +600,28 @@ a:hover {
   margin-top: 0.5rem;
   color: #cbd5e0;
 }
+
+
+.feature-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 250px; /* Choose a fixed height that fits your images */
+  overflow: hidden;
+}
+
+.slideshow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slideshow-image.active {
+  opacity: 1;
+  z-index: 1;
+}
