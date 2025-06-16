@@ -524,6 +524,11 @@ a:hover {
   height: auto; /* remove fixed height */
 }
 
+.feature-slideshow {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .feature-slideshow img,
 .map-container iframe {
   width: 100%;
@@ -532,6 +537,23 @@ a:hover {
   object-fit: contain;
   border-radius: 10px;
 }
+
+.feature-slideshow img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.two-column-feature {
+  align-items: stretch;
+}
+
+.feature-text, .feature-slideshow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 
 /* Responsive behavior */
 @media (max-width: 768px) {
