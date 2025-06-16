@@ -288,16 +288,15 @@ a:hover {
 
 .slideshow-image {
   position: absolute;
+  transition: opacity 1s ease-in-out;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* or cover if you want it to fill */
+  object-fit: contain;
   border-radius: 10px;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
-
 
 .slideshow-image.active {
   opacity: 1;
@@ -479,8 +478,7 @@ a:hover {
 
 
 /* Shared styling for both sides */
-.feature-text,
-.map-container {
+.feature-text, .map-container, .feature-slideshow {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -491,15 +489,6 @@ a:hover {
   height: 100%;
   overflow: hidden;
 }
-
-/* NEW separate rule for slideshow */
-.feature-slideshow {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9; /* or use a max-height */
-  overflow: hidden;
-}
-
 
 /* Text-specific tweaks */
 .feature-text {
