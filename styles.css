@@ -521,7 +521,6 @@ a:hover {
 .feature-slideshow {
   flex: 1;
   position: relative;
-  height: auto; /* remove fixed height */
 }
 
 .feature-slideshow {
