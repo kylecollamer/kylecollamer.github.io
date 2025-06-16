@@ -463,7 +463,7 @@ a:hover {
 }
 
 .two-column-feature {
-  display: flex;
+  display: grid;
   align-items: flex-start; /* Already set */
   gap: 40px;
   height: auto; /* Remove fixed height */
