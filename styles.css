@@ -286,6 +286,11 @@ a:hover {
   margin: auto;
 }
 
+#slideshow-image-watkinsglen {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
 .slide {
   display: none;
   text-align: center;

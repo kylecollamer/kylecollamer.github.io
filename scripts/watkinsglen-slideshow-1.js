@@ -14,20 +14,28 @@ function showSlidesWatkinsGlen() {
   const imgElement = document.getElementById('slideshow-image-watkinsglen');
   const current = imagesWatkinsGlen[slideIndexWatkinsGlen];
 
-  // Clear the src temporarily to avoid flicker or mismatched images
-  imgElement.src = '';
+  // Start fade-out
+  imgElement.style.opacity = 0;
 
-  // Load image and then show next one
-  imgElement.onload = () => {
-    setTimeout(showSlidesWatkinsGlen, 4000);
-  };
+  setTimeout(() => {
+    // Set new image source
+    imgElement.src = `motorsport-images/watkins-glen-imsa-2024-images/track-pictures/${current.filename}`;
 
-  imgElement.onerror = () => {
-    console.error("Image failed to load:", current.filename);
-    setTimeout(showSlidesWatkinsGlen, 4000);
-  };
+    imgElement.onload = () => {
+      // Fade back in once image has loaded
+      imgElement.style.opacity = 1;
 
-  imgElement.src = `motorsport-images/watkins-glen-imsa-2024-images/track-pictures/${current.filename}`;
+      // Schedule the next image
+      setTimeout(showSlidesWatkinsGlen, 4000);
+    };
 
+    imgElement.onerror = () => {
+      console.error("Image failed to load:", current.filename);
+      setTimeout(showSlidesWatkinsGlen, 4000);
+    };
+  }, 500); // Delay to allow fade out before switching src
+
+  // Move to next image in list
   slideIndexWatkinsGlen = (slideIndexWatkinsGlen + 1) % imagesWatkinsGlen.length;
 }
+
