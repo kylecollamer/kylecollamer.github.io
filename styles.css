@@ -541,3 +541,10 @@ a:hover {
   border-color: #cbd5e0; /* soft border on focus */
   box-shadow: 0 0 0 2px #cbd5e0;
 }
+
+.slideshow-caption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5rem;
+  color: #555;
+}
