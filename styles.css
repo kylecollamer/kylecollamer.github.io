@@ -469,7 +469,7 @@ a:hover {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  height: auto;
+  height: 600px;
   max-width: 1200px;
   margin: 3rem auto;
   padding: 0 20px;
