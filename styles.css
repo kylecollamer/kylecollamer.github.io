@@ -659,7 +659,7 @@ a:hover {
 
 .feature-slideshow img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain; /* or cover if you want to crop */
   display: block;
 }
