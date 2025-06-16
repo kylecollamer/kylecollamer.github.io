@@ -638,3 +638,28 @@ a:hover {
   flex: 1 1 50%;
   max-width: 50%;
 }
+
+.two-column-feature {
+  display: flex;
+  align-items: flex-start; /* align tops */
+  gap: 2rem;
+}
+
+.feature-text,
+.feature-slideshow {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.feature-slideshow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.feature-slideshow img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* or cover if you want to crop */
+  display: block;
+}
