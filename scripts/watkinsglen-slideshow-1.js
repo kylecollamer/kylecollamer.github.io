@@ -1,41 +1,43 @@
 let imagesWatkinsGlen = [];
 let slideIndexWatkinsGlen = 0;
+let currentImg = 1; // Toggle between 1 and 2
 
 fetch('motorsport-images/watkins-glen-imsa-2024-images/track-pictures/images.json')
   .then(response => response.json())
   .then(data => {
     imagesWatkinsGlen = data;
-    showSlidesWatkinsGlen();
+    crossfadeSlidesWatkinsGlen();
   });
 
-function showSlidesWatkinsGlen() {
+function crossfadeSlidesWatkinsGlen() {
   if (imagesWatkinsGlen.length === 0) return;
 
-  const imgElement = document.getElementById('slideshow-image-watkinsglen');
-  const current = imagesWatkinsGlen[slideIndexWatkinsGlen];
+  const nextImg = (currentImg === 1) ? 2 : 1;
+  const currentElement = document.getElementById(`slideshow-img-${currentImg}`);
+  const nextElement = document.getElementById(`slideshow-img-${nextImg}`);
 
-  // Start fade-out
-  imgElement.style.opacity = 0;
-
-  setTimeout(() => {
-    // Set new image source
-    imgElement.src = `motorsport-images/watkins-glen-imsa-2024-images/track-pictures/${current.filename}`;
-
-    imgElement.onload = () => {
-      // Fade back in once image has loaded
-      imgElement.style.opacity = 1;
-
-      // Schedule the next image
-      setTimeout(showSlidesWatkinsGlen, 4000);
-    };
-
-    imgElement.onerror = () => {
-      console.error("Image failed to load:", current.filename);
-      setTimeout(showSlidesWatkinsGlen, 4000);
-    };
-  }, 500); // Delay to allow fade out before switching src
-
-  // Move to next image in list
+  const nextImage = imagesWatkinsGlen[slideIndexWatkinsGlen];
   slideIndexWatkinsGlen = (slideIndexWatkinsGlen + 1) % imagesWatkinsGlen.length;
-}
 
+  // Preload next image
+  const tempImg = new Image();
+  tempImg.onload = () => {
+    nextElement.src = tempImg.src;
+
+    // Fade in new image
+    nextElement.classList.add("active");
+    currentElement.classList.remove("active");
+
+    currentImg = nextImg;
+
+    // Schedule next transition
+    setTimeout(crossfadeSlidesWatkinsGlen, 4000);
+  };
+
+  tempImg.onerror = () => {
+    console.error("Failed to load:", nextImage.filename);
+    setTimeout(crossfadeSlidesWatkinsGlen, 4000);
+  };
+
+  tempImg.src = `motorsport-images/watkins-glen-imsa-2024-images/track-pictures/${nextImage.filename}`;
+}

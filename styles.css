@@ -286,6 +286,23 @@ a:hover {
   margin: auto;
 }
 
+.slideshow-image {
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.slideshow-image.active {
+  opacity: 1;
+}
+
+
 #slideshow-image-watkinsglen {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -467,6 +484,10 @@ a:hover {
   justify-content: flex-start;
   flex: 1;
   min-width: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Text-specific tweaks */
