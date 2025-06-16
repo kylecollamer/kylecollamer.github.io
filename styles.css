@@ -625,3 +625,16 @@ a:hover {
   opacity: 1;
   z-index: 1;
 }
+
+
+.two-column-feature {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* optional spacing between columns */
+}
+
+.feature-text,
+.feature-slideshow {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
