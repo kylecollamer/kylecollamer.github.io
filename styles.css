@@ -478,7 +478,8 @@ a:hover {
 
 
 /* Shared styling for both sides */
-.feature-text, .map-container, .feature-slideshow {
+.feature-text,
+.map-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -489,6 +490,15 @@ a:hover {
   height: 100%;
   overflow: hidden;
 }
+
+/* NEW separate rule for slideshow */
+.feature-slideshow {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* or use a max-height */
+  overflow: hidden;
+}
+
 
 /* Text-specific tweaks */
 .feature-text {
