@@ -664,3 +664,14 @@ a:hover {
   display: block;
 }
 
+.two-column-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.feature-slideshow {
+  display: flex;
+  align-items: flex-start;
+}
+
