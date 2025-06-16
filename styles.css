@@ -651,18 +651,6 @@ a:hover {
 }
 
 .two-column-feature {
-  border: 2px solid red;
-}
-
-.feature-text {
-  border: 2px dashed red;
-}
-
-.feature-slideshow {
-  border: 2px dotted red;
-}
-
-.two-column-feature {
   display: flex;
   gap: 2rem;
   align-items: stretch; /* ← ensures both children are same height */
