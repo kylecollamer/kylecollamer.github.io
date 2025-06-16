@@ -651,6 +651,14 @@ a:hover {
   justify-content: flex-start;
 }
 
-.feature-slideshow img {
-  width: 100%;
+.two-column-feature {
+  border: 2px solid red;
+}
+
+.feature-text {
+  border: 2px dashed red;
+}
+
+.feature-slideshow {
+  border: 2px dotted red;
 }
