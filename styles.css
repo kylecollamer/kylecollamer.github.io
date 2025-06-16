@@ -287,19 +287,19 @@ a:hover {
 }
 
 .slideshow-image {
-  position: absolute;
-  transition: opacity 1s ease-in-out;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 600px;
   object-fit: contain;
   border-radius: 10px;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: relative; /* remove absolute */
 }
 
 .slideshow-image.active {
   opacity: 1;
+  position: relative;
 }
 
 
@@ -464,12 +464,9 @@ a:hover {
 
 .two-column-feature {
   display: flex;
-  flex-direction: row;
+  align-items: flex-start; /* Already set */
   gap: 40px;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  height: 600px;
+  height: auto; /* Remove fixed height */
   max-width: 1200px;
   margin: 3rem auto;
   padding: 0 20px;
@@ -492,6 +489,7 @@ a:hover {
 
 /* Text-specific tweaks */
 .feature-text {
+  flex: 1;
   color: #EAEAEA;
 }
 
@@ -518,6 +516,12 @@ a:hover {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+
+.feature-slideshow {
+  flex: 1;
+  position: relative;
+  height: auto; /* remove fixed height */
 }
 
 .feature-slideshow img,
