@@ -24,7 +24,6 @@
     </script>
 
     <main>
-      <!-- 2024 Sahlen's Six Hours of The Glen -->
       <div class="two-column-feature">
         <div class="feature-text">
           <h2>2024 Sahlen's Six Hours of The Glen</h2>
@@ -37,63 +36,16 @@
         </div>
         <div class="feature-slideshow">
           <img id="slideshow-image-watkinsglen" src="" alt="Motorsport Photo">
+          <p class="slideshow-caption" id="caption-watkinsglen"></p>
         </div>
       </div>
-
-      <!-- 2024 Honda Indy 200 at Mid-Ohio -->
-      <div class="two-column-feature">
-        <div class="feature-text">
-          <h2>2024 Honda Indy 200 at Mid-Ohio</h2>
-          <p>
-            The 2024 Honda Indy 200 at Mid-Ohio was held on July 7, 2024, at the Mid-Ohio Sports Car Course in Lexington, Ohio.
-            It served as the ninth round of the 2024 NTT IndyCar Series season and featured intense wheel-to-wheel racing on the 2.258-mile permanent road course.
-          </p>
-        </div>
-        <div class="feature-slideshow">
-          <img id="slideshow-image-midohio" src="" alt="IndyCar Photo">
-        </div>
-      </div>
-
-      <!-- Slideshows -->
-      <script>
-        // Watkins Glen slideshow
-        let imagesWatkinsGlen = [];
-        let slideIndexWatkinsGlen = 0;
-        fetch('motorsport-images/watkins-glen-imsa-2024-images/images.json')
-          .then(response => response.json())
-          .then(data => {
-            imagesWatkinsGlen = data.map(filename => `motorsport-images/watkins-glen-imsa-2024-images/${filename}`);
-            showSlidesWatkinsGlen();
-          });
-        function showSlidesWatkinsGlen() {
-          if (imagesWatkinsGlen.length === 0) return;
-          const imgElement = document.getElementById('slideshow-image-watkinsglen');
-          imgElement.src = imagesWatkinsGlen[slideIndexWatkinsGlen];
-          slideIndexWatkinsGlen = (slideIndexWatkinsGlen + 1) % imagesWatkinsGlen.length;
-          setTimeout(showSlidesWatkinsGlen, 4000);
-        }
-
-        // Mid-Ohio slideshow
-        let imagesMidOhio = [];
-        let slideIndexMidOhio = 0;
-        fetch('motorsport-images/mid-ohio-indycar-2024-images/images.json')
-          .then(response => response.json())
-          .then(data => {
-            imagesMidOhio = data.map(filename => `motorsport-images/mid-ohio-indycar-2024-images/${filename}`);
-            showSlidesMidOhio();
-          });
-        function showSlidesMidOhio() {
-          if (imagesMidOhio.length === 0) return;
-          const imgElement = document.getElementById('slideshow-image-midohio');
-          imgElement.src = imagesMidOhio[slideIndexMidOhio];
-          slideIndexMidOhio = (slideIndexMidOhio + 1) % imagesMidOhio.length;
-          setTimeout(showSlidesMidOhio, 4000);
-        }
-      </script>
     </main>
 
     <footer>
       <p>&copy; 2025 Kyle Collamer</p>
     </footer>
+
+    <!-- External slideshow scripts -->
+    <script src="scripts/watkinsglen-slideshow.js"></script>
   </body>
 </html>
