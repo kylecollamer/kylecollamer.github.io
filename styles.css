@@ -529,7 +529,6 @@ a:hover {
   padding-top: 0;
 }
 
-.feature-slideshow img,
 .map-container iframe {
   width: 100%;
   height: 100%;
@@ -538,11 +537,6 @@ a:hover {
   border-radius: 10px;
 }
 
-.feature-slideshow img {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
 
 .two-column-feature {
   align-items: stretch;
@@ -659,7 +653,4 @@ a:hover {
 
 .feature-slideshow img {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: none;
 }
