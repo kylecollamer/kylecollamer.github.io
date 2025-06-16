@@ -287,6 +287,7 @@ a:hover {
 }
 
 .slideshow-image {
+  position: absolute;
   transition: opacity 1s ease-in-out;
   top: 0;
   left: 0;
