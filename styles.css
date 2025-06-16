@@ -688,3 +688,19 @@ a:hover {
   object-fit: cover; /* Or use `contain` if you prefer the full image in bounds */
   border-radius: 0.5rem;
 }
+
+.two-column-feature {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  min-height: 250px; /* Add a minimum height */
+}
+
+.feature-text,
+.feature-slideshow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100%;
+}
