@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(145deg, #4a5463, #2f3744);
+  background: linear-gradient(145deg, #d9d9d9, #dfdfdf);
   color: #FFFFFF;
 }
 
@@ -166,8 +166,7 @@ article p {
 /* Footer */
 footer {
   background: url('footer.svg') no-repeat center top;
-  background-size: contain;
-  background-position: center -100px;
+  background-size 
   background-color: #3a424f;
   color: #fff;
   padding: 20px;
