@@ -13,8 +13,46 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(145deg, #4a5463, #2f3744);
+  background: none;
   color: #FFFFFF;
+}
+
+/* Background layers */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+
+/* Base light gray + black diagonal background */
+body::before {
+  background: 
+    linear-gradient(135deg, 
+      black 20%, 
+      #ccc 20%, 
+      #ccc 80%, 
+      black 80%);
+}
+
+/* Red accent shapes */
+body::after {
+  background: 
+    linear-gradient(135deg,
+      transparent 30%, 
+      #a6311d 30%, 
+      #a6311d 40%, 
+      transparent 40%,
+      transparent 60%,
+      #a6311d 60%, 
+      #a6311d 70%, 
+      transparent 70%);
+  opacity: 0.9; /* slightly see-through like in your image */
+  z-index: -1;
 }
 
 /* Headings */
