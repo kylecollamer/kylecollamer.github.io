@@ -165,7 +165,9 @@ article p {
 
 /* Footer */
 footer {
-  background: url('footer.svg');
+  background: url('footer.svg') no-repeat center top;
+  background-size: contain;
+  background-position: center -100px;
   background-color: #3a424f;
   color: #fff;
   padding: 20px;
