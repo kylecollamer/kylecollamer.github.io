@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Programming Tutoring</title>
+</head>
+
+<body>
+    <header>
+        <h1>Programming Tutoring</h1>
+        <p>I offer tutoring services in computer science and programming concepts.</p>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <script>
+        fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <main>
+        <div class="two-column-feature">
+            <div class="feature-text">
+                <h2>About Me</h2>
+                <p>
+                    With a strong background in software engineering and practical programming experience, 
+                    I help students develop not only coding skills but also problem-solving strategies. 
+                    My goal is to ensure learners gain confidence in applying computer science concepts 
+                    to real-world applications.
+                </p>
+                <p>
+                    I have experience with a wide range of programming languages, development tools, and 
+                    software design principles. Whether you're just starting out or looking to strengthen 
+                    your skills in advanced topics, I provide structured and supportive guidance.
+                </p>
+            </div>
+
+            <div class="feature-text">
+                <h2>Tutoring Subjects</h2>
+
+                <details>
+                    <summary><h3>C</h3></summary>
+                    <p>Pointers, memory management, functions, arrays, and procedural programming.</p>
+                </details>
+
+                <details>
+                    <summary><h3>C++</h3></summary>
+                    <p>Object-oriented programming, STL, templates, classes, and memory handling.</p>
+                </details>
+
+                <details>
+                    <summary><h3>C#</h3></summary>
+                    <p>.NET framework basics, OOP concepts, GUI development, and modern application design.</p>
+                </details>
+
+                <details>
+                    <summary><h3>Java</h3></summary>
+                    <p>OOP, inheritance, interfaces, collections framework, and application development.</p>
+                </details>
+
+                <details>
+                    <summary><h3>JavaScript</h3></summary>
+                    <p>DOM manipulation, event handling, ES6 features, asynchronous programming, and web development.</p>
+                </details>
+
+                <details>
+                    <summary><h3>HTML & CSS</h3></summary>
+                    <p>Semantic HTML, responsive design, CSS selectors, flexbox, and styling principles.</p>
+                </details>
+
+                <details>
+                    <summary><h3>Python</h3></summary>
+                    <p>Scripting, data analysis, OOP, file handling, and popular libraries (NumPy, pandas).</p>
+                </details>
+
+                <details>
+                    <summary><h3>SQL & Databases</h3></summary>
+                    <p>Database design, queries, joins, normalization, and relational database concepts.</p>
+                </details>
+
+                <details>
+                    <summary><h3>Object-Oriented Programming (OOP)</h3></summary>
+                    <p>Encapsulation, inheritance, polymorphism, abstraction, and design principles.</p>
+                </details>
+
+                <details>
+                    <summary><h3>Software Development</h3></summary>
+                    <p>Version control (Git), debugging, testing, software lifecycle, and best practices.</p>
+                </details>
+
+                <details>
+                    <summary><h3>Data Structures</h3></summary>
+                    <p>Arrays, linked lists, stacks, queues, trees, graphs, and hash tables.</p>
+                </details>
+
+                <details>
+                    <summary><h3>Algorithms</h3></summary>
+                    <p>Sorting, searching, recursion, dynamic programming, and algorithm analysis (Big-O).</p>
+                </details>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kyle Collamer</p>
+    </footer>
+
+    <script>
+        fetch('nav.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(err => console.error('Navbar load error:', err));
+    </script>
+</body>
+</html>
