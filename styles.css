@@ -732,4 +732,44 @@ details[open] summary::after {
   transform: rotate(90deg); /* points downward when open */
 }
 
+/* Default: two columns */
+.two-column-feature {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.feature-text,
+.feature-slideshow,
+.map-container {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* Mobile: stack columns */
+@media (max-width: 768px) {
+  .two-column-feature {
+    flex-direction: column;
+  }
+
+  .feature-text,
+  .feature-slideshow,
+  .map-container {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile nav: stack items */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar > li {
+    margin: 5px 0;
+    text-align: center;
+  }
+}
 
