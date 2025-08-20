@@ -703,40 +703,31 @@ details {
 }
 
 summary {
-  cursor: pointer;
-  list-style: none; /* hides default triangle marker */
-}
-
-summary::-webkit-details-marker {
-  display: none; /* remove default marker in Chrome/Safari */
-}
-
-summary h3 {
-  display: inline;
-  font-size: 1.2em;
-}
-
-/* Remove default marker */
-summary::-webkit-details-marker {
-  display: none;
-}
-summary::marker {
-  content: "";
-}
-
-/* Style summary to flex for alignment */
-summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  padding: 0.2em 0;
+  padding: 0.3em 0;
+  list-style: none; /* hide default triangle */
+}
+
+summary::-webkit-details-marker,
+summary::marker {
+  display: none; /* hide default marker in all browsers */
+}
+
+/* Heading inside summary */
+summary h3 {
+  margin: 0;        /* remove default spacing */
+  font-size: 1.2em; 
+  font-weight: bold;
 }
 
 /* Custom arrow */
 summary::after {
   content: "▶";       /* right-pointing arrow */
-  font-size: 0.9em;
+  font-size: 1em;
+  margin-left: 0.5em;
   transition: transform 0.2s ease;
 }
 
@@ -744,4 +735,5 @@ summary::after {
 details[open] summary::after {
   transform: rotate(90deg); /* points downward when open */
 }
+
 
