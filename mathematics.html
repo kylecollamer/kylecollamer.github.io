@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mathematics Tutoring</title>
+</head>
+
+<body>
+    <header>
+    <h1>Mathematics Tutoring</h1>
+    <p>I offer tutoring services for a wide variety of math subjects.</p>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <script>
+        fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <main>
+        <div class="two-column-feature">
+            <div class="feature-text">
+            <h2>About Me</h2>
+            <p>
+                From an early age, I developed a strong foundation in mathematics during grade school,
+                where I consistently excelled in problem solving and logical reasoning.
+                My interest in analytical thinking grew through advanced coursework and academic challenges,
+                which gave me the skills to explain mathematical concepts clearly and effectively.
+                I later pursued a degree in Software Engineering,
+                where I strengthened not only my technical expertise but also my ability to apply mathematical principles to real-world problems.
+                Throughout my studies, I gained experience in both individual and collaborative learning environments,
+                further developing my communication skills and my ability to guide others through complex material.
+                Today, I bring together my background in mathematics and software engineering to provide tutoring that is both practical and engaging.
+                My goal is to help students build confidence, understand concepts deeply, and see how math connects to the world around them.
+            </p>
+            </div>
+            <div class="feature-text">
+                <h2>Religious Emblems Overview</h2>
+                <p>I offer tutoring in the following subjects:</p>
+                <ul>
+                    <li>Pre-Algebra</li>
+                    <li>Algebra I & II</li>
+                    <li>Geometry</li>
+                    <li>Trigonometry</li>
+                    <li>Pre-Calculus</li>
+                    <li>Calculus I & II</li>
+                    <li>Differential Equations</li>
+                    <li>Statistics</li>
+                    <li>Discrete Math</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kyle Collamer</p>
+    </footer>
+
+    <script>
+        fetch('nav.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(err => console.error('Navbar load error:', err));
+    </script>
+</body>
+</html>
