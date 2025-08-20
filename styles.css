@@ -715,3 +715,33 @@ summary h3 {
   display: inline;
   font-size: 1.2em;
 }
+
+/* Remove default marker */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::marker {
+  content: "";
+}
+
+/* Style summary to flex for alignment */
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.2em 0;
+}
+
+/* Custom arrow */
+summary::after {
+  content: "▶";       /* right-pointing arrow */
+  font-size: 0.9em;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary::after {
+  transform: rotate(90deg); /* points downward when open */
+}
+
