@@ -23,11 +23,6 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-h3 {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
 /* Header styling */
 header {
   background: linear-gradient(to right, #2f3744, #3a424f);
