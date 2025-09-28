@@ -493,7 +493,7 @@ a:hover {
   color: #EAEAEA;
 }
 
-.feature-text h2 {
+.feature-text h2, h3 {
   font-size: 1.8rem;
   color: #ffffff;
   border-bottom: 1px solid #4a5568;
