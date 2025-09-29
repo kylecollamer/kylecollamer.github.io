@@ -822,11 +822,17 @@ details[open] summary::after {
   text-align: center; /* or left if you prefer */
 }
 
-/* Remove box look from columns */
+/* Remove all gray rounded boxes across site */
+.contact-container section,
+.card,
+.feature-columns > div,
 .two-column-feature .feature-text,
-.two-column-feature .feature-slideshow {
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 0; /* optional if you want tighter spacing */
+.two-column-feature .feature-slideshow,
+.map-container,
+.slideshow-image,
+.slide img {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0; /* optional */
 }
