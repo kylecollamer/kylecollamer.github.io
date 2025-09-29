@@ -811,6 +811,13 @@ details[open] summary::after {
   }
 }
 
+.feature-columns p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 1.2em;
+}
+
 /* Heading for two-column-feature wrapper */
 .two-column-feature h2.section-heading {
   width: 100%;
