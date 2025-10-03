@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Head-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Order of the Arrow</title>
+  </head>
+
+  <!--Body-->
+  <body>
+    <!--Header-->
+    <header>
+      <h1>Order of the Arrow</h1>
+      <p>Take a look at my current and previous leadership, travels, and experiences at various Order of the Arrow events as a part of Wagion Lodge #6!</p>
+    </header>
+
+    <!--Navigation Bar-->
+    <div id="navbar-container"></div>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <main>
+      <!--National Order of the Arrow Confrence (NOAC) 2024-->
+      <div class="feature-section">
+        <h2>National Order of the Arrow Confrence (NOAC) 2024</h2>
+        <div class="feature-columns">
+          <div>
+            <p>
+              Wagion Lodge #6 sent a spirited contingent to the 2024 National Order of the Arrow Conference at the University of Colorado Boulder, and I was fortunate to be a part of it. Alongside Arrowmen from across the nation, we experienced a week filled with leadership training, fellowship, and the celebration of Scouting’s honor society. Beyond the conference itself, our contingent enjoyed unforgettable side trips, including exploring Garden of the Gods and visiting the United States Air Force Academy in Colorado Springs, as well as spending time at Ben Delatour Scout Ranch near Fort Collins. The trip gave us the chance to grow as leaders, strengthen friendships, and proudly represent Wagion Lodge on a national stage.
+            </p>
+          </div>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/jLF8Kr11il4"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Kyle Collamer</p>
+    </footer>
+  </body>
+</html>
