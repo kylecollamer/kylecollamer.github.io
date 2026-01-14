@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Educational Background</title>
+  </head>
+  <body>
+    <header>
+      <h1>Educational Background</h1>
+      <p>Learn more about my educational background.</p>
+    </header>
+
+    <div id="navbar-container"></div>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <h1>Penn State University</h1>
+    <p>
+        My academic background is rooted in a rigorous Software Engineering curriculum that balanced theoretical science with hands-on development. I built a deep foundation in the full software lifecycle. This is from initial design and analysis to verification and long-term maintenance. Beyond the code, the program emphasized high-level problem solving, collaborative team dynamics, and professional communication, all of which I applied during a year-long senior capstone project.
+    </p>
+
+    <main class="about-content">
+        <section>
+            <div class="feature-section">
+            <h2>Software Engineering</h2>
+            <div class="feature-columns">
+                <h3>Object-Oriented Software Design and Construction</h3>
+                <div>
+                    <p>During my time in SWENG 311, I focused on building scalable systems through structured engineering strategies and object-oriented principles. I gained hands-on experience with the entire development lifecycle, including the design, documentation, testing, and construction of software. By using modeling tools like UML, I learned how to visualize complex architectures before implementing them in major object-oriented languages. This approach taught me how to apply proven design patterns to mid-sized systems to ensure the code remains clean and maintainable.</p>
+                </div>
+                <h3>Software Engineering</h3>
+                <h3>Software Architecture</h3>
+                <h3>Software Verification, Validation, and Testing</h3>
+                <h3>Embedded Real Time Systems</h3>
+                <h3>Software Engineering Design & Project</h3>
+            </div>
+        </section>
+    </main>
+
+    <main class="about-content">
+        <section>
+            <div class="feature-section">
+            <h2>Computer Science</h2>
+            <div class="feature-columns">
+                <h3>Introduction to Programming Techniques</h3>
+                <h3>Intermediate Programming</h3>
+                <h3>Discrete Mathematics for Computer Science</h3>
+                <h3>Database Management Systems</h3>
+                <h3>Programming Language Concepts</h3>
+                <h3>Data Structures and Algorithms</h3>
+            </div>
+        </section>
+    </main>
+
+    <main class="about-content">
+        <section>
+            <div class="feature-section">
+            <h2>Computer Engineering</h2>
+            <div class="feature-columns">
+                <h3>Introduction to Digital Systems</h3>
+                <h3>Digital Design Laboratory</h3>
+                <h3>Microprocessors</h3>
+                <h3>Operating Systems</h3>
+                <h3>Communication Networks</h3>
+            </div>
+        </section>
+    </main>
+
+    <main class="about-content">
+        <section>
+            <div class="feature-section">
+            <h2>Chemistry</h2>
+            <div class="feature-columns">
+                <div>
+                    <p>For my scientific core, I completed a comprehensive chemistry sequence focused on the properties of matter and chemical bonding. This included a year of hands-on laboratory work where I gained experience in experimental techniques, data collection, and technical documentation. It provided me with a strong scientific perspective and a disciplined approach to analyzing complex systems.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="about-content">
+        <section>
+            <div class="feature-section">
+            <h2>Chemistry</h2>
+            <div class="feature-columns">
+                <div>
+                    <p>For my scientific core, I completed a comprehensive chemistry sequence focused on the properties of matter and chemical bonding. This included a year of hands-on laboratory work where I gained experience in experimental techniques, data collection, and technical documentation. It provided me with a strong scientific perspective and a disciplined approach to analyzing complex systems.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Kyle Collamer</p>
+    </footer>
+  </body>
+</html>
