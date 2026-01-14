@@ -43,7 +43,7 @@ header p {
 
 /* Navigation bar */
 nav {
-  background-color: #373e4a;
+  background-color: #373e4a80;
   color: #ffffff;
   padding: 10px 0;
   position: sticky;
