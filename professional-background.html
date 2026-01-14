@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google-site-verification" content="hzABLfvOZgfZaAP4jjVIPGygleBUZDXDJeKESYSDowA" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Professional Background</title>
+  </head>
+  <body>
+    <header>
+      <h1>Professional Background</h1>
+      <p>Learn more about my professional background.</p>
+    </header>
+
+    <div id="navbar-container"></div>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <main class="about-content">
+        <section>
+            <div class="feature-section">
+            <h2>Westinghouse Electric Company</h2>
+            <div class="feature-columns">
+            <div>
+                <p>As of October 2025, I am employed as a Software Engineer at Westinghouse Electric Company LLC, located in Warrendale, Pennsylvania.</p>
+            </div>
+            <div>
+                
+            </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <main class="about-content">
+        <section>
+            <div class="feature-section">
+            <h2>Programming and Mathematics Tutoring</h2>
+            <div class="feature-columns">
+            <div>
+                <p>Since May 2025, I have been working as a part-time tutor in programming and mathematics.</p>
+            </div>
+            <div>
+                
+            </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Kyle Collamer</p>
+    </footer>
+  </body>
+</html>
