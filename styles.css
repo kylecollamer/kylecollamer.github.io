@@ -863,7 +863,7 @@ details[open] summary::after {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
   gap: 40px;
 }
 
@@ -874,7 +874,7 @@ details[open] summary::after {
 
 .toc-sidebar nav {
   position: sticky;
-  top: 250px;
+  top: 270px;
   align-self: start;
   background: transparent;
   box-shadow: none;
@@ -928,4 +928,8 @@ details[open] summary::after {
   .toc-sidebar nav {
     position: static; /* Disable sticky scrolling on mobile */
   }
+}
+
+h2[id] {
+  scroll-margin-top: 240px; 
 }
