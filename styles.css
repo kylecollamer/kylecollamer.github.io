@@ -10,12 +10,13 @@
 }
 
 body {
-  padding-top: 220px; /* Adjust this to the total height of header + nav */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(145deg, #4a5463, #2f3744);
   color: #FFFFFF;
+  padding-top: 220px; /* Essential: This stops the overlap */
+  padding-bottom: 60px; /* Space for fixed footer */
 }
 
 /* Headings */
@@ -28,13 +29,13 @@ h1, h2, h3 {
 header {
   background: linear-gradient(to right, #2f3744, #3a424f);
   color: #fff;
-  padding: 40px 20px; /* Reduced padding slightly to save screen space */
+  padding: 40px 20px;
   text-align: center;
-  position: fixed; /* Lock to top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1001; /* Stay above everything */
+  z-index: 1100; /* Higher than nav */
 }
 
 header h1 {
@@ -52,11 +53,11 @@ nav {
   background-color: #373e4a;
   color: #ffffff;
   padding: 10px 0;
-  position: fixed; /* Lock to top */
-  top: 154px; /* Adjust this value to match the height of your header */
+  position: fixed;
+  top: 154px; /* Adjust this to match your header height */
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .navbar {
@@ -176,12 +177,12 @@ footer {
   padding: 15px;
   text-align: center;
   font-size: 0.9rem;
-  opacity: 1; /* Increased opacity for readability since it's always visible */
-  position: fixed; /* Lock to bottom */
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  border-top: 1px solid #4a5568;
 }
 
 footer a {
@@ -863,23 +864,21 @@ details[open] summary::after {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  gap: 40px; /* Space between sidebar and text */
+  gap: 40px;
+}
+
+.toc-sidebar {
+  flex: 0 0 250px;
+  padding-right: 20px;
 }
 
 /* Sidebar Container */
 .toc-sidebar nav {
   position: sticky;
-  top: 240px; /* Adjust this so it sits right below your fixed navbar */
+  top: 240px; /* Pushes the TOC menu down below the fixed nav */
   align-self: start;
   background: transparent;
-}
-
-/* sticky positioning makes it stay on screen while scrolling */
-.toc-sidebar nav {
-  position: sticky;
-  top: 20px; /* Distance from top of browser window */
-  align-self: start;
-  background: transparent;
+  box-shadow: none; /* Removes shadow from TOC nav but keeps it on top nav */
 }
 
 .toc-sidebar ul {
@@ -894,16 +893,17 @@ details[open] summary::after {
 
 .toc-sidebar a {
   text-decoration: none;
-  color: #ddd;
-  font-weight: bold;
-  display: block; /* Makes the whole area clickable */
-  transition: color 0.2s, font-weight 0.2s;
-  border-bottom: none;
-  background: transparent;
+  color: #B8B2A6;
+  font-weight: normal;
+  display: block;
+  padding: 5px 0;
+  transition: all 0.2s;
 }
 
 .toc-sidebar a:hover {
-  color: #FFFFFF; /* Change this color to match your specific theme */
+  color: #FFFFFF !important;
+  font-weight: bold;
+  border-bottom: none !important;
 }
 
 /* Main Content Area */
