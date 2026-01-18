@@ -868,6 +868,7 @@ details[open] summary::after {
   position: sticky;
   top: 20px; /* Distance from top of browser window */
   align-self: start;
+  background: transparent;
 }
 
 .toc-sidebar ul {
@@ -885,7 +886,9 @@ details[open] summary::after {
   color: none;
   font-weight: bold;
   display: block; /* Makes the whole area clickable */
-  transition: color 0.2s;
+  transition: color 0.2s, font-weight 0.2s;
+  border-bottom: none;
+  background: transparent;
 }
 
 .toc-sidebar a:hover {
