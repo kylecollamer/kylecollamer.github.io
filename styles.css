@@ -859,19 +859,27 @@ details[open] summary::after {
 /* Sidebar Container */
 .toc-sidebar {
   flex: 0 0 250px; /* Fixed width for sidebar */
-  border-right: 1px solid #ddd; /* Light grey divider line */
+  /* No background or border-right */
   padding-right: 20px;
 }
 
 /* sticky positioning makes it stay on screen while scrolling */
 .toc-sidebar nav {
   position: sticky;
-  top: 20px; /* Distance from top of browser window */
+  top: 100px; /* Moves it down slightly so it doesn't hit the top nav */
   align-self: start;
 }
 
+.toc-sidebar h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #fff; /* White header for the menu */
+  border-bottom: 1px solid #4a5568; /* Optional subtle line under the title "Table of Contents" */
+  padding-bottom: 5px;
+}
+
 .toc-sidebar ul {
-  list-style: none; /* Removes bullet points */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -882,37 +890,40 @@ details[open] summary::after {
 
 .toc-sidebar a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  display: block; /* Makes the whole area clickable */
-  transition: color 0.2s;
+  color: #B8B2A6; /* Light grey (matches your navbar) */
+  font-weight: normal; /* Normal weight by default */
+  display: block; 
+  transition: color 0.2s, font-weight 0.2s;
+  border-bottom: none; /* Explicitly remove global link underline */
 }
 
 .toc-sidebar a:hover {
-  color: #0056b3; /* Change this color to match your specific theme */
+  color: #FFFFFF; /* White on hover */
+  font-weight: bold; /* Bold on hover */
+  border-bottom: none !important; /* Forces removal of global hover underline */
+  background: transparent; /* Ensures no background color appears */
 }
 
 /* Main Content Area */
 .about-content {
-  flex: 1; /* Takes up the remaining space */
+  flex: 1; 
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
   .content-wrapper {
-    flex-direction: column; /* Stack them vertically on phones */
+    flex-direction: column; 
   }
   
   .toc-sidebar {
     width: 100%;
     flex: none;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    border-bottom: 1px solid #4a5568; /* Divider only on mobile */
   }
   
   .toc-sidebar nav {
-    position: static; /* Disable sticky scrolling on mobile */
+    position: static; 
   }
 }
