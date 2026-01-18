@@ -859,7 +859,6 @@ details[open] summary::after {
 
 /* --- TABLE OF CONTENTS LAYOUT --- */
 
-/* Wrapper to hold the sidebar and the main content side-by-side */
 .content-wrapper {
   display: flex;
   max-width: 1200px;
@@ -873,17 +872,16 @@ details[open] summary::after {
   padding-right: 20px;
 }
 
-/* Sidebar Container */
 .toc-sidebar nav {
   position: sticky;
-  top: 240px; /* Pushes the TOC menu down below the fixed nav */
+  top: 250px;
   align-self: start;
   background: transparent;
-  box-shadow: none; /* Removes shadow from TOC nav but keeps it on top nav */
+  box-shadow: none;
 }
 
 .toc-sidebar ul {
-  list-style: none; /* Removes bullet points */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
