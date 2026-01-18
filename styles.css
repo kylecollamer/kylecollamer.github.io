@@ -887,7 +887,7 @@ details[open] summary::after {
 }
 
 .toc-sidebar li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .toc-sidebar a {
@@ -931,5 +931,15 @@ details[open] summary::after {
 }
 
 h2[id] {
-  scroll-margin-top: 240px; 
+  scroll-margin-top: 270px; 
+}
+
+.toc-subtitle {
+  display: block;        /* Forces it to the next line */
+  font-size: 0.85rem;    /* Makes it smaller than the main link */
+  color: #999;           /* Light gray color */
+  font-style: italic;    /* Italics */
+  margin-top: 2px;       /* Small gap between link and subtitle */
+  pointer-events: none;  /* Makes it unclickable just in case */
+  margin-bottom: 8px;    /* Extra space before the next list item */
 }
