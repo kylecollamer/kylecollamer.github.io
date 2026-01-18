@@ -883,7 +883,7 @@ details[open] summary::after {
 
 .toc-sidebar a {
   text-decoration: none;
-  color: none;
+  color: #ddd;
   font-weight: bold;
   display: block; /* Makes the whole area clickable */
   transition: color 0.2s, font-weight 0.2s;
@@ -892,7 +892,7 @@ details[open] summary::after {
 }
 
 .toc-sidebar a:hover {
-  color: #0056b3; /* Change this color to match your specific theme */
+  color: #FFFFFF; /* Change this color to match your specific theme */
 }
 
 /* Main Content Area */
