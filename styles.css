@@ -396,6 +396,11 @@ a:hover {
   color: #cccccc;
 }
 
+.about-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 .centered {
   text-align: center;
 }
