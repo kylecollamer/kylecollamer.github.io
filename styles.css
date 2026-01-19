@@ -948,3 +948,12 @@ h2[id] {
   pointer-events: none;  /* Makes it unclickable just in case */
   margin-bottom: 8px;    /* Extra space before the next list item */
 }
+
+/* Styling for the secondary text inside the TOC links */
+.toc-sidebar a .toc-extra {
+  font-size: 0.85rem;    /* Smaller than the main title */
+  font-weight: normal;   /* Removes the bold if the parent is bold */
+  color: #999;           /* Dims the color slightly to create hierarchy */
+  display: block;        /* Ensures it stays on its own line */
+  margin-top: 2px;
+}
