@@ -12,18 +12,83 @@
 <body>
     <header>
         <h1>Kyle Collamer</h1>
-        <p>Hello, welcome to my personal website. I am a future software developer and scouter.</p>
+        <p>Software Engineer, Educator, and Servant Leader.</p>
     </header>
+
     <div id="navbar-container"></div>
+
+    <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+            <div class="slide-bg" style="background-image: url('images/about-transparent.png');"></div>
+            <div class="slide-content">
+                <h2>Who I Am</h2>
+                <p>Explore my journey as a software engineer, my academic background, and the core values that guide my life and leadership.</p>
+                <a href="about.html" class="slide-btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="slide-bg" style="background-image: url('images/projects-transparent.png');"></div>
+            <div class="slide-content">
+                <h2>Featured Projects</h2>
+                <p>Check out my technical projects, like the custom College for Kids Inventory System and various software solutions.</p>
+                <a href="college-for-kids.html" class="slide-btn">View Projects</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="slide-bg" style="background-image: url('images/tutoring-transparent.png');"></div>
+            <div class="slide-content">
+                <h2>Empowering Others</h2>
+                <p>I offer personalized tutoring services in both Mathematics and Programming to help students build confidence and master complex topics.</p>
+                <a href="programming.html" class="slide-btn">Explore Tutoring</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="slide-bg" style="background-image: url('images/scouting-transparent.png');"></div>
+            <div class="slide-content">
+                <h2>Scouting & Servant Leadership</h2>
+                <p>Active involvement with Troop 205, Wagion Lodge #6 (Order of the Arrow), and coordinating Catholic Religious Emblems.</p>
+                <a href="troop-205.html" class="slide-btn">View Scouting</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="slide-bg" style="background-image: url('images/writing-transparent.png');"></div>
+            <div class="slide-content">
+                <h2>Code & Compass</h2>
+                <p>Read my newsletter covering ethics in leadership, the balance of AI, and the massive importance of youth organizations.</p>
+                <a href="https://www.linkedin.com/newsletters/code-compass-7311093232849874944/" class="slide-btn" target="_blank">Read My Newsletter</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025-2026 Kyle Collamer</p>
+    </footer>
+
     <script>
         fetch('nav.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
         });
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Changes slide every 5 seconds
+        }
     </script>
-    <footer>
-        <p>&copy; 2025-2026 Kyle Collamer</p>
-    </footer>
 </body>
 </html>
